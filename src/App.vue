@@ -1,18 +1,15 @@
 <template>
   <v-app>
     <router-view />
-    <confirm-dialog ref="ConfirmDialog" />
   </v-app>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import ConfirmDialog from "@/components/ConfirmDialog.vue";
 export default Vue.extend({
-  components: { ConfirmDialog },
+  components: {  },
   mounted() {
-    // this.$root.$confirm = this.$refs.ConfirmDialog.open;
-    Vue.prototype.$confirm = this.$refs.ConfirmDialog.open;
+   
   }
 });
 </script>

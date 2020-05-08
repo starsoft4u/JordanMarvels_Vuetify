@@ -3,6 +3,16 @@ import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css'
 Vue.use( Vuetify);
 
+import VuetifyConfirm from 'vuetify-confirm'
+const vuetify = new Vuetify({
+  // icons: {
+  //   iconfont: "md"
+  // },
+  // theme: { dark: true }
+});
+Vue.config.productionTip = false;
+Vue.use(VuetifyConfirm,{vuetify})
+
 export default new Vuetify({
   // theme: {
   //   options: {

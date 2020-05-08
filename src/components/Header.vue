@@ -78,8 +78,8 @@ export default Vue.extend({
   },
   methods: {
     onClickLogout: function() {
-      this.$confirm("", "Are you sure LOGOUT?").then(f => {
-        if (f) {
+      this.$confirm( "Are you sure LOGOUT?").then(res => {
+        if (res) {
           delete localStorage.jm_admin_vuetify_logged;
           this.$router.replace({ name: "Login" });
         }

@@ -36,22 +36,22 @@ export default {
         rec: {}
       },
       table_headers: [
-        { text: "Name", value: "name", aling: "start", sortable: true },
-        { text: "Email", value: "email", aling: "start", sortable: true },
+        { text: "Name", value: "name", align: "start", sortable: true },
+        { text: "Email", value: "email", align: "start", sortable: true },
         {
           text: "Date Joined",
           value: "joined_date",
-          aling: "start",
+          align: "start",
           sortable: true
         },
         {
           text: "No.Bookings",
           value: "bookings_no",
-          aling: "start",
+          align: "start",
           sortable: true
         },
-        { text: "Edit", value: "edit", aling: "start", sortable: false },
-        { text: "Delete", value: "delete", aling: "start", sortable: false }
+        { text: "Edit", value: "edit", align: "start", sortable: false },
+        { text: "Delete", value: "delete", align: "start", sortable: false }
       ],
       table_items: [
         {
@@ -133,9 +133,9 @@ export default {
       console.log(this.table_items);
       const index = this.table_items.indexOf(item);
       this
-        .$confirm("", "Are you sure delete " + item.name + "?")
-        .then(f => {
-          console.log(f);
+        .$confirm( "Are you sure delete " + item.name + "?")
+        .then(res => {
+          console.log(res);
         });
       // confirm("Are you sure you want to delete this item?") &&
       //   this.table_items.splice(index, 1);

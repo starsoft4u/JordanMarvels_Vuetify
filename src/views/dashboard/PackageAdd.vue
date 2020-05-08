@@ -198,13 +198,11 @@ export default {
       });
     },
     cancelGalleryUploading() {
-      this.$confirm("", "Cancel Uploading?")
-        .then(() => {
+      this.$confirm("Cancel Uploading?").then(res => {
+        if (res) {
           console.log("canceled");
-        })
-        .catch(() => {
-          console.log("continue");
-        });
+        }
+      });
     },
     removeGalleryPhoto(index) {
       if (index < this.photos.length) {

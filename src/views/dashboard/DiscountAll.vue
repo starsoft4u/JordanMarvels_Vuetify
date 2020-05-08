@@ -1,5 +1,7 @@
 <template>
   <v-card class="ma-12">
+      <v-card-title class="justify-center">All Discounts</v-card-title>
+      <v-card-subtitle class="text-center">you can add new Discount here.</v-card-subtitle>
     <v-card-text>
       <v-data-table :headers="table_headers" :items="table_items">
         <template v-slot:item.edit="{item}">
@@ -39,23 +41,23 @@ export default {
         {
           text: "Discount Name",
           value: "name",
-          aling: "start",
+          align: "start",
           sortable: true
         },
         {
           text: "Discount Type",
           value: "type",
-          aling: "start",
+          align: "start",
           sortable: true
         },
         {
           text: "Discount Amount(%)",
           value: "amount",
-          aling: "start",
+          align: "start",
           sortable: true
         },
-        { text: "Edit", value: "edit", aling: "center", sortable: false },
-        { text: "Delete", value: "delete", aling: "center", sortable: false }
+        { text: "Edit", value: "edit", align: "center", sortable: false },
+        { text: "Delete", value: "delete", align: "center", sortable: false }
       ],
       table_items: []
     };
@@ -70,8 +72,8 @@ export default {
       console.log(item);
       console.log(this.table_items);
       const index = this.table_items.indexOf(item);
-      this.$confirm("", "Are you sure delete " + item.name + "?").then(f => {
-        console.log(f);
+      this.$confirm( "Are you sure delete " + item.name + "?").then(res => {
+        console.log(res);
       });
       // confirm("Are you sure you want to delete this item?") &&
       //   this.table_items.splice(index, 1);

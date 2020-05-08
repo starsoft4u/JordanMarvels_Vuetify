@@ -1,8 +1,9 @@
 <template>
   <v-card class="ma-12">
     <v-card-text>
+      <v-card-title class="justify-center">All Packages</v-card-title>
+      <v-card-subtitle class="text-center">you can add new Package here.</v-card-subtitle>
       <v-data-table :headers="table_headers" :items="table_items">
-       
         <template v-slot:item.view="{item}">
           <v-icon @click="viewItem(item)">fas fa-eye</v-icon>
           <!-- <v-icon @click="editItem(item)">material-icons visibility material-icons--outline</v-icon> -->
@@ -31,98 +32,95 @@ export default {
         rec: {}
       },
       table_headers: [
-        { text: "Package Name", value: "name", aling: "start", sortable: true },
+        { text: "Package Name", value: "name", align: "start", sortable: true },
         {
           text: "Pakcage Category",
           value: "category",
-          aling: "start",
+          align: "start",
           sortable: true
         },
         {
           text: "Price",
           value: "price",
-          aling: "start",
+          align: "start",
           sortable: true
         },
-        { text: "View", value: "view", aling: "center", sortable: false },
-        { text: "Edit", value: "edit", aling: "center", sortable: false },
-        { text: "Delete", value: "delete", aling: "center", sortable: false }
+        { text: "View", value: "view", align: "center", sortable: false },
+        { text: "Edit", value: "edit", align: "center", sortable: false },
+        { text: "Delete", value: "delete", align: "center", sortable: false }
       ],
       table_items: [
         {
           name: "Honeymoon Plus",
           category: "Couple Package",
-          price: "$250/Couple",
+          price: "$250/Couple"
         },
         {
           name: "Best Plus for 4",
           category: "Friends Package",
-          price: "$50/Person",
+          price: "$50/Person"
         },
         {
           name: "Honeymoon Plus",
           category: "Couple Package",
-          price: "$250/Couple",
+          price: "$250/Couple"
         },
         {
           name: "Best Plus for 4",
           category: "Friends Package",
-          price: "$50/Person",
+          price: "$50/Person"
         },
         {
           name: "Honeymoon Plus",
           category: "Couple Package",
-          price: "$250/Couple",
+          price: "$250/Couple"
         },
         {
           name: "Best Plus for 4",
           category: "Friends Package",
-          price: "$50/Person",
+          price: "$50/Person"
         },
         {
           name: "Honeymoon Plus",
           category: "Couple Package",
-          price: "$250/Couple",
+          price: "$250/Couple"
         },
         {
           name: "Best Plus for 4",
           category: "Friends Package",
-          price: "$50/Person",
+          price: "$50/Person"
         },
         {
           name: "Honeymoon Plus",
           category: "Couple Package",
-          price: "$250/Couple",
+          price: "$250/Couple"
         },
         {
           name: "Best Plus for 4",
           category: "Friends Package",
-          price: "$50/Person",
-        },
+          price: "$50/Person"
+        }
       ]
     };
   },
-  methods: {    
-    viewItem(item){
-      
+  methods: {
+    viewItem(item) {
       this.detail_dialog_props.rec = item;
       this.detail_dialog_props.visible = true;
     },
     editItem(item) {
       // this.detail_dialog_props.rec = item;
       // this.detail_dialog_props.visible = true;
-      this.$router.push({name:'PackageAllEdit',params:item});
+      this.$router.push({ name: "PackageAllEdit", params: item });
     },
 
     deleteItem(item) {
       console.log(item);
       console.log(this.table_items);
       const index = this.table_items.indexOf(item);
-      this
-        .$confirm("", "Are you sure delete " + item.name + "?")
-        .then(f => {
-          console.log(f);
-        });
+      this.$confirm("Are you sure delete " + item.name + "?").then(res => {
+        console.log(res);
+      });
       // confirm("Are you sure you want to delete this item?") &&
       //   this.table_items.splice(index, 1);
     }

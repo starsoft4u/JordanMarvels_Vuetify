@@ -1,5 +1,7 @@
 <template>
   <v-card class="ma-12">
+      <v-card-title class="justify-center">All Package Categories</v-card-title>
+      <v-card-subtitle class="text-center">you can add new Package Category here.</v-card-subtitle>
     <v-card-text>
       <v-data-table :headers="table_headers" :items="table_items">  
         <template v-slot:item.edit="{item}">
@@ -26,21 +28,21 @@ export default {
         rec: {}
       },
       table_headers: [
-        { text: "Category No.", value: "no", aling: "start", sortable: true },
+        { text: "Category No.", value: "no", align: "start", sortable: true },
         {
           text: "Pakcage Category Name",
           value: "name",
-          aling: "start",
+          align: "start",
           sortable: true
         },
         {
           text: "Date",
           value: "date",
-          aling: "start",
+          align: "start",
           sortable: true
         },
-        { text: "Edit", value: "edit", aling: "center", sortable: false },
-        { text: "Delete", value: "delete", aling: "center", sortable: false }
+        { text: "Edit", value: "edit", align: "center", sortable: false },
+        { text: "Delete", value: "delete", align: "center", sortable: false }
       ],
       table_items: [
         {
@@ -133,9 +135,9 @@ export default {
       console.log(this.table_items);
       const index = this.table_items.indexOf(item);
       this
-        .$confirm("", "Are you sure delete " + item.name + "?")
-        .then(f => {
-          console.log(f);
+        .$confirm( "Are you sure delete " + item.name + "?")
+        .then(res => {
+          console.log(res);
         });
       // confirm("Are you sure you want to delete this item?") &&
       //   this.table_items.splice(index, 1);
