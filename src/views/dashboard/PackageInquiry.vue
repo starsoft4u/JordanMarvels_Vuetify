@@ -1,6 +1,6 @@
 <template>
   <v-card class="ma-12">
-    <v-card-title class="justify-center">Packages Inquiry</v-card-title>
+    <v-card-title class="justify-center text-uppercase">Packages Inquiry</v-card-title>
     <v-card-subtitle class="text-center">The list of special book inquiries</v-card-subtitle>
     <v-card-text>
       <v-data-table :headers="table_headers" :items="table_items">

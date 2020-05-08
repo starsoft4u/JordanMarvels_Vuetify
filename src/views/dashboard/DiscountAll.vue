@@ -1,6 +1,6 @@
 <template>
   <v-card class="ma-12">
-      <v-card-title class="justify-center">All Discounts</v-card-title>
+      <v-card-title class="justify-center text-uppercase">All Discounts</v-card-title>
       <v-card-subtitle class="text-center">you can add new Discount here.</v-card-subtitle>
     <v-card-text>
       <v-data-table :headers="table_headers" :items="table_items">

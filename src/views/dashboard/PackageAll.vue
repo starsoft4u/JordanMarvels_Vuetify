@@ -1,7 +1,7 @@
 <template>
   <v-card class="ma-12">
     <v-card-text>
-      <v-card-title class="justify-center">All Packages</v-card-title>
+      <v-card-title class="justify-center text-uppercase">All Packages</v-card-title>
       <v-card-subtitle class="text-center">you can add new Package here.</v-card-subtitle>
       <v-data-table :headers="table_headers" :items="table_items">
         <template v-slot:item.view="{item}">

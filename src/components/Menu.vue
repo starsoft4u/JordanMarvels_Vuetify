@@ -126,7 +126,7 @@ export default Vue.extend({
 </script>
 <style lang="scss" scoped>
 .menu-container {
-  min-height: calc(100vh-24px);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   .text-copyright {

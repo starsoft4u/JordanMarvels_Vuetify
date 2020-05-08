@@ -1,5 +1,7 @@
 <template>
   <v-card class="ma-12">
+    <v-card-title class="justify-center text-uppercase">All customers</v-card-title>
+    <v-card-subtitle class="text-center">List of all the available customer in System</v-card-subtitle>
     <v-card-text>
       <v-data-table :headers="table_headers" :items="table_items">
         <template v-slot:top>
@@ -132,11 +134,9 @@ export default {
       console.log(item);
       console.log(this.table_items);
       const index = this.table_items.indexOf(item);
-      this
-        .$confirm( "Are you sure delete " + item.name + "?")
-        .then(res => {
-          console.log(res);
-        });
+      this.$confirm("Are you sure delete " + item.name + "?").then(res => {
+        console.log(res);
+      });
       // confirm("Are you sure you want to delete this item?") &&
       //   this.table_items.splice(index, 1);
     }

@@ -1,6 +1,6 @@
 <template>
   <v-card class="ma-12">
-    <v-card-title class="justify-center">All tour bookings</v-card-title>
+    <v-card-title class="justify-center text-uppercase">All tour bookings</v-card-title>
     <v-card-text>
       <v-data-table :headers="table_headers" :items="table_items">
         <template v-slot:item.status="{item}">

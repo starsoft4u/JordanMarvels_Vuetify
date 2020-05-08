@@ -1,6 +1,6 @@
 <template>
   <v-card class="ma-12">
-      <v-card-title class="justify-center">All Package Categories</v-card-title>
+      <v-card-title class="justify-center text-uppercase">All Package Categories</v-card-title>
       <v-card-subtitle class="text-center">you can add new Package Category here.</v-card-subtitle>
     <v-card-text>
       <v-data-table :headers="table_headers" :items="table_items">  
